@@ -1,0 +1,32 @@
+<br />
+<H1><center><font color="#96bb7c"><B>Search Movie from TheMovieDb</B></font></center></H1>
+<br />
+
+  <div class="center">
+<div class="box_table">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+<table class="table table-hover" width="70%" border="5px" bgcolor="#96bb7c" padding="15px">
+  <thead>
+    <tr>
+    <th >Title</th>
+    <th >Rating</th>
+    <th >Release Date</th>
+    </tr>
+  </thead>
+
+  <tbody bgcolor="#f5f1da">
+    <% @movie_list.each do |movie| %>
+      <tr>
+      <td padding: 15px ><img src="https://image.tmdb.org/t/p/w500/<%= movie['poster_path'] %>" alt="" height="30%"><br><%= movie['title'] %></td>
+      <td padding: 15px><%= movie['vote_average'] %></td>
+      <td padding: 15px><%= movie['release_date'] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div> 
+</div> 
+
+
+<br>
