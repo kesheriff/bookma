@@ -1,0 +1,33 @@
+
+
+<body>
+
+
+<table class="table table-hover" width="70%" border="5px" bgcolor="#96bb7c" padding="15px">
+  <thead>
+    <tr>
+    <th >Title</th>
+    <th >Rating</th>
+    <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody bgcolor="#f5f1da">
+    <% @movies.each do |movie| %>
+      <tr>
+      <td padding: 15px ><%= movie.title %></td>
+      <td padding: 15px><%= movie.rating %></td>
+      <td padding: 15px><%= link_to '<button class="button_table">Show</button>'.html_safe, movie %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div> 
+</div> 
+
+
+
+<br>
+
+</body>
