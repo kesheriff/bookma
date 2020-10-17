@@ -1,0 +1,2 @@
+class MovieFromTmdb < ApplicationRecord
+end
