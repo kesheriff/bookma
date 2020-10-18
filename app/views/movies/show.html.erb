@@ -9,12 +9,12 @@
 <div class="container" 
 style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; border-radius: 10px; border: 7px groove #96bb7c;">
 
-<p class="c_show">Title:<%= @movie.title %></p>
+<strong><p class="c_show">Title:<%= @movie.title %></p></strong>
 
-
-<p class="c_show">Rating:<%= @movie.rating %></p>
-
-
+<br>
+<strong><p class="c_show">Rating:<%= @movie.rating %></p></strong>
+<br>
+<strong><p class="c_show">Release date:<%= @movie.release_date %></p></strong>
 <br>
 <br>
 <% if @reviews.blank? %>
@@ -24,12 +24,12 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
 <p>Review:</p>
 <hr>
   <% @reviews.each do |review| %>
-    <p><%= review.user_id %></p>
+    <p><%= review.user.email %></p>
     <p><%= review.comment %></p>
     <hr>
   <% end %>
   <% end %>
-  <%= link_to  '<button class="button_in_nav">New review</button>'.html_safe, new_movie_review_path(@movie) %>  
+  <%= link_to  '<button class="button_in_nav">Write review</button>'.html_safe, new_movie_review_path(@movie) %>  
 
 
 
