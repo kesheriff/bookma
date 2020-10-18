@@ -2,56 +2,42 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<%= link_to '<button class="button_in_nav">Review Movie</button>'.html_safe, new_movie_review_path(@movie) %>  
+
 
 <body>
-<div class="center">
-<div class="movie-form">
-<p class="c_show" style="text-align:center">
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
 
-<p class="c_show" style="text-align:center">
-  <strong>Rating:</strong>
-  <%= @movie.rating %>
-</p>
+<div class="container" 
+style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; border-radius: 10px; border: 7px groove #96bb7c;">
 
-<p class="c_show" style="text-align:center">
-  <strong>Description:</strong>
-  <%= @movie.description %>
-</p>
+<p class="c_show">Title:<%= @movie.title %></p>
 
-<p class="c_show" style="text-align:center">
-  <strong>Release date:</strong>
-  <%= @movie.release_date %>
-</p>
+
+<p class="c_show">Rating:<%= @movie.rating %></p>
+
+
 <br>
-
-<div class="center">
-<%= link_to '<button class="button_submit">Edit</button>'.html_safe, edit_movie_path(@movie) %>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-<%= link_to '<button class="button_delete">Delete</button>'.html_safe, @movies,:method => :delete %>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-<%= link_to '<button class="button_back">Back</button>'.html_safe, movies_path %>
-
-
-</div>
-</div>
-</div>
-<h1><%= @movie.title %></h1>
-
+<br>
 <% if @reviews.blank? %>
 <h3> No reviews </h3>
 
 <% else %>
+<p>Review:</p>
+<hr>
   <% @reviews.each do |review| %>
-    <p><%= review.rating %></p>
+    <p><%= review.user_id %></p>
     <p><%= review.comment %></p>
+    <hr>
   <% end %>
   <% end %>
+  <%= link_to  '<button class="button_in_nav">New review</button>'.html_safe, new_movie_review_path(@movie) %>  
+
+
+
+
+</div>
+
+
+
 </body>
 
 
