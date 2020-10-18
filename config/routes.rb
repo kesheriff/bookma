@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :reviews,:movies,:tmdb_search
   root to: 'movies#index'
   get 'search' => 'movie_from_tmdb#index' , as:'search'
