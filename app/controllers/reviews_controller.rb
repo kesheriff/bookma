@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
+    @review = Review.find(params[:id])
   end
 
   # GET /reviews/new
@@ -20,6 +21,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
+    @review = Review.find(params[:id])
   end
 
   # POST /reviews
@@ -43,6 +45,7 @@ class ReviewsController < ApplicationController
   # PATCH/PUT /reviews/1
   # PATCH/PUT /reviews/1.json
   def update
+    @review = Review.find(params[:id])
     respond_to do |format|
       if @review.update(review_params)
         format.html { redirect_to @review, notice: 'Review was successfully updated.' }
@@ -57,9 +60,10 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   # DELETE /reviews/1.json
   def destroy
+    @review = Review.find(params[:id])
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to reviews_path, notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to movies_path, notice: 'Review was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -21,18 +21,20 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
 <h3> No reviews </h3>
 
 <% else %>
-<p>Review:</p>
+
 <hr>
   <% @reviews.each do |review| %>
     <p><%= review.user.email %></p>
     <p><%= review.comment %></p>
+    <%= link_to '<button class="button_review">Edit</button>'.html_safe, edit_movie_review_path(@movie) %>
+    
     <hr>
   <% end %>
   <% end %>
+  <br>
+  <div class="center">
   <%= link_to  '<button class="button_in_nav">Write review</button>'.html_safe, new_movie_review_path(@movie) %>  
-
-
-
+  </div>
 
 </div>
 

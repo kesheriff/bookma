@@ -176,6 +176,18 @@
   
   .button_submit:hover {background-color: #96bb7c;color: white;}
   
+  .button_review {
+    background-color: #f5f1da ;
+    color: #eebb4d;
+    border: 4px solid #eebb4d;
+    padding: 5px 8px;
+    border-radius: 12px;
+    font-family: monaco,Consolas,Lucida Console,monospace; 
+    font-size: 125%;
+  }
+  
+  .button_review:hover {background-color: #eebb4d;color: white;}
+
   .button_back {
     background-color: #f5f1da ;
     color: #c26565;
