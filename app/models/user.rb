@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
+  
+  has_many :review,dependent: :destroy
+  has_many :movies
 
   def self.new_with_session(params, session)
     super.tap do |user|
