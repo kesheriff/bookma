@@ -8,15 +8,15 @@ class MoviesController < ApplicationController
     end
 
     def show
-        @movies = Movie.find(params[:id])
+        @reviews = Review.where(movie_id: @movie.id).order("created_at DESC")
     end
 
     def new
-        @movie = Movie.new
+        @movie = current_user.movies.build
     end
 
     def create
-        @movie = Movie.new(movie_params)
+        @movie = current_user.movies.build(movie_params)
     
           if @movie.save
             #redirect_to movies_path(@movie), :notice => "Movie was successfully created."

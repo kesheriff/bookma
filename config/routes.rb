@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
 devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  resources :reviews,:movies
+  resources :movies do
+    resources :reviews, except: [:show, :index]
+  end
   root to: 'movies#index'
 
   get 'search' => 'movie_from_tmdb#index' , as:'search'
