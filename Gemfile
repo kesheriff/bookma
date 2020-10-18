@@ -30,6 +30,7 @@ gem 'omniauth-facebook'
 gem 'themoviedb'
 gem 'jquery-rails'
 gem 'momentjs-rails'
+gem 'bootstrap', '~> 5.0.0.alpha1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
