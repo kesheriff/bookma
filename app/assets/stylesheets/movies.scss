@@ -1,3 +1,264 @@
 // Place all the styles related to the movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.bookkytomatoes{
+  font-size: 300%;
+  color: #c26565;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  text-shadow: 0 0 10px #FFFFFF, 2px 2px 2px rgba(206,89,55,0);
+}
+
+.bookkytomatoes:hover {background-color: #96bb7c;color: #f5f1da;}
+
+.button_in_nav {
+  background-color: #f5f1da;
+  color: #c26565;
+  border: 4px solid #c26565;
+  padding: 4px 20px;
+  font-size: 125%;
+  border-radius: 12px;
+  display: block;
+  font-family: monaco,Consolas,Lucida Console,monospace;
+  float: left;
+  
+}
+
+.button_in_nav:hover {background-color: #c26565 ;color: white;}
+
+.navbar {
+  overflow: hidden;
+  align-items: left;
+  justify-content: left;
+  background-color: #96bb7c;
+}
+
+
+
+.navbar a:hover {background-color: #96bb7c;color: #f5f1da;}
+
+body{
+  background-color: #c26565;
+}
+
+
+.button_home {
+  background-color: #eebb4d;
+  color: black;
+  border: 2px solid #eebb4d;
+  padding: 26px 20px;
+  font-size: 100%;
+  display: block;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  
+}
+
+.button_new {
+  background-color: #f5f1da;
+  color: #c26565;
+  border: 4px solid #96bb7c;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 150%;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+}
+
+.button_new:hover {background-color: #96bb7c;color: white;}
+
+.button_table {
+  background-color: white;
+  color: #c26565;
+  border: 2px solid #96bb7c;
+  padding: 7px 15px;
+  border-radius: 12px;
+  font-size: 100%;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+}
+.button_table:hover {background-color: #96bb7c;color: white;}
+
+body{
+  background-color: #c26565;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .left {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .box_table {
+  width: 70%;
+  padding: 10px;
+  margin: 0;
+}
+
+h1{
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+}
+
+label{
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 125%;
+}
+
+.c_show{
+  font-size: 125%;
+}
+
+.movie-form {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  color: #c26565;
+  background: #f5f1da;
+  border-radius: 10px;
+  border: 7px groove #96bb7c;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+
+  h1 {
+    margin: 0 0 24px 0;
+  }
+
+  .form-input-material {
+    margin: 12px 0;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 18px 0 9px 0;
+  }
+}
+
+#table-scroll {
+  
+  overflow:auto;  
+  margin-top:20px;
+}
+
+
+
+.button_submit {
+  background-color: #f5f1da ;
+  color: #96bb7c;
+  border: 4px solid #96bb7c;
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 125%;
+}
+
+.button_submit:hover {background-color: #96bb7c;color: white;}
+
+.button_back {
+  background-color: #f5f1da ;
+  color: #c26565;
+  border: 4px solid #c26565;
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 125%;
+}
+
+.button_back:hover {background-color: #c26565 ;color: white;}
+
+.button_search {
+  background-color: #f5f1da ;
+  color: #c26565;
+  border: 4px solid #c26565;
+  padding: 4px 20px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 125%;
+}
+
+.button_search:hover {background-color: #c26565 ;color: white;}
+
+.button_delete {
+  background-color: #f5f1da ;
+  color: #eebb4d;
+  border: 4px solid #eebb4d ;
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 125%;
+}
+
+.button_delete:hover {background-color: #eebb4d ;color: white;}
+
+.button_sign_in {
+  background-color: #f5f1da ;
+  color: #96bb7c;
+  border: 4px solid #96bb7c ;
+  padding: 7px 20px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 100%;
+}
+
+.button_sign_in:hover {background-color: #96bb7c ;color: white;}
+
+.button_log_in {
+  background-color: #f5f1da ;
+  color: #eebb4d;
+  border: 4px solid #eebb4d ;
+  padding: 7px 20px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 100%;
+}
+
+.button_log_in:hover {background-color: #eebb4d ;color: white;}
+
+.button_sign_in_facebook {
+  background-color: #f5f1da ;
+  color: #3B5998;
+  border: 4px solid #3B5998 ;
+  padding: 7px 20px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 100%;
+}
+
+.button_sign_in_facebook:hover {background-color: #3B5998 ;color: white;}
+
+.button_sign_in_facebook_main {
+  background-color: #f5f1da ;
+  color: #3B5998;
+  border: 4px solid #3B5998 ;
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 150%;
+}
+
+.button_sign_in_facebook_main:hover {background-color: #3B5998 ;color: white;}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 7px 20px;
+  border-radius: 12px;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-size: 100%;
+}
+
+table{
+  font-family: Cambria,Georgia,serif; 
+  font-size: 125%;
+}
+
+
+
