@@ -1,11 +1,3 @@
-
-<br>
-<br>
-<br>
-
-
-<body>
-
 <div class="container" 
 style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; border-radius: 10px; border: 7px groove #96bb7c;">
 
@@ -15,7 +7,8 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
 <strong><p class="c_show">Rating:<%= @movie.rating %></p></strong>
 <br>
 <strong><p class="c_show">Release date:<%= @movie.release_date %></p></strong>
-
+<br>
+<br>
 <% if @reviews.blank? %>
 <h3> No reviews </h3>
 
@@ -32,30 +25,10 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
     <hr>
   <% end %>
   <% end %>
-
-  <div class="row">
-  <div class="col-sm">
+  <br>
   <div class="center">
   <%= link_to  '<button class="button_in_nav">Write review</button>'.html_safe, new_movie_review_path(@movie) %>  
-  </div>
-  </div>
-  <div class="col-sm">
-  <div class="center">
   <%= link_to 'close','',{:id => 'closelink'} %>
   </div>
-  </div>
-  <div class="col-sm">
-  <div class="center">
-  <%= link_to  '<button class="button_in_nav">Back</button>'.html_safe, movies_path %>  
-  </div>
-  </div>
+
 </div>
-</div>
-
-
-
-</body>
-
-
-
-
