@@ -32,4 +32,18 @@ class MovieFromTmdbController < ApplicationController
           @movie_list = []
         end
     end
+
+    def edit
+      @movie_test = MovieDb.find(params[:id])
+    end
+    #--------------------------------------------------
+    def update
+      @movie_test = MovieDb.find(params[:id])
+      @movie = MovieFromTmdb.new(:title => @movie_test.Movie_Title,:Rating => @movie_test.Rating,:Release_Date => @movie_test.Release_Date,:description => @movie_test.More_Info)
+      if(@movie.save)
+        redirect_to @movie
+      else
+        render 'new'
+      end
+    end
 end

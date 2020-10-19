@@ -1,0 +1,32 @@
+<br />
+<br />
+<br />
+<br />
+<H1><font color="blue">!Add Movie To MyRottenPotatoes From TheMovieDb!</font></H1>
+<br />
+<H5>
+  <%= form_for :movie_test ,url: searching_path(@movie_test),method: :patch do |f| %>
+    <B>
+      <p>
+        <%= f.label :Movie_Title %><br>
+        <%= f.text_field :Movie_Title %>
+      </p>
+      <p>
+        <%= f.label :Rating %><br>
+        <%= f.text_field :Rating %>
+      </p>
+      <p>
+        <%= f.label :Release_Date %><br>
+        <%= f.text_field :Release_Date %>
+      </p>
+      <p>
+        <%= f.label :More_Info %><br>
+        <%= f.text_field :More_Info %>
+      </p>
+      <p>
+        <%= f.submit("Save to Rotten" ,{:class =>"btn btn-primary"}) %>
+      </p>
+    </B>
+  <% end %>
+  <%= button_to "Cancel", home_path, :method => "get" ,:class => 'btn btn-danger'%>
+</H5>

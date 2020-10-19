@@ -11,6 +11,7 @@
     <th >Title</th>
     <th >Rating</th>
     <th >Release Date</th>
+    <th >Add Movie</th>
     </tr>
   </thead>
 
@@ -20,6 +21,7 @@
       <td padding: 15px ><img src="https://image.tmdb.org/t/p/w500/<%= movie['poster_path'] %>" alt="" height="30%"><br><%= movie['title'] %></td>
       <td padding: 15px><%= movie['vote_average'] %></td>
       <td padding: 15px><%= movie['release_date'] %></td>
+      <td padding: 15px></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,3 +31,6 @@
 </div> 
 
 
+<% if current_user %>
+  <div> <%= current_user.name %></div>
+  <% end %>

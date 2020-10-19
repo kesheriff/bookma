@@ -45,6 +45,7 @@ class ReviewsController < ApplicationController
   # PATCH/PUT /reviews/1
   # PATCH/PUT /reviews/1.json
   def update
+    
     @review = Review.find(params[:id])
     respond_to do |format|
       if @review.update(review_params)

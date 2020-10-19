@@ -1,38 +1,67 @@
 
 
 <body>
-<br>
-<br>
+
 <% unless current_user %>
+  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
 <% else %>
-
-<div class="center">
-<%= form_tag search_path, :method => 'get' do %>
-
-  <%= text_field_tag :search, params[:search] ,:class => 'input_search' %>
-  <%= submit_tag "Search" ,:class => 'button_search' ,:autocomplete => "off"%>
+<div class="row">
+  <div class="col-sm">
+  <% if current_user %>
+    <div class="email_user">
+    <%= current_user.email %>
+    </div>
   <% end %>
+  <%= link_to '<button class="button_log_out">Log out</button>'.html_safe, destroy_user_session_path, method: :delete %>
   </div>
+  <div class="col-sm">
+  <div class="center">
   <br>
   <br>
+<%= link_to '<button class="button_in_nav">Add New Movie</button>'.html_safe, new_movie_path %> 
+
+</div>
+  </div>
+  <div class="col-sm">
+  <div class="center">
+  <br>
+  <br>
+  <%= form_tag search_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] ,:class => 'input_search' %>
+    <%= submit_tag "Search" ,:class => 'button_search' ,:autocomplete => "off"%>
+    <% end %>
+
+    </div>
+  </div>
+</div>
+<% end %>
+<hr style="height:2px;border-width:3;color:gray;background-color:#c26565">
+
+  
+
 <div class="center">
 <div class="box_table">
 <div class="table-wrapper-scroll-y my-custom-scrollbar">
 <table class="table table-hover" width="70%" border="5px" bgcolor="#96bb7c" padding="15px">
   <thead>
     <tr>
+    <th >ID</th>
     <th >Title</th>
     <th >Rating</th>
-    <th colspan="1"></th>
+    <th >Review</th>
+    <th >More info</th>
     </tr>
   </thead>
 
   <tbody bgcolor="#f5f1da">
     <% @movies.each do |movie| %>
       <tr>
-      <td padding: 15px ><img src="https://image.tmdb.org/t/p/w500/ %>" alt="" height="30%"><%= movie.title %></td>
-      <td padding: 15px><%= movie.rating %></td>
-      <td padding: 15px><%= link_to '<button class="button_table">Show</button>'.html_safe, movie %></button></td>
+      <td ><%= movie.id %></td>
+      <td ><img src="https://image.tmdb.org/t/p/w500/ %>" alt="" height="30%"><%= movie.title %></td>
+      <td ><%= movie.rating %></td>
+      <td ><%= link_to "Review #{movie.title}", movie_path(movie) %></button></td>
+      <td padding: 15px><%= link_to "More info #{movie.title}", movie_path(movie) %></button></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -41,6 +70,6 @@
 </div> 
 </div> 
 
-<% end %>
+
 
 </body>
