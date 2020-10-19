@@ -183,16 +183,25 @@
   .button_submit:hover {background-color: #96bb7c;color: white;}
   
   .button_review {
-    background-color: #f5f1da ;
-    color: #eebb4d;
-    border: 4px solid #eebb4d;
-    padding: 5px 8px;
-    border-radius: 12px;
+    color: #c26565;
+    border: none;
+    background-color: inherit;
     font-family: monaco,Consolas,Lucida Console,monospace; 
     font-size: 125%;
   }
   
-  .button_review:hover {background-color: #eebb4d;color: white;}
+
+  .bookkytomatoes{
+    font-size: 300%;
+    color: #c26565;
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    font-family: monaco,Consolas,Lucida Console,monospace; 
+    text-shadow: 0 0 10px #FFFFFF, 2px 2px 2px rgba(206,89,55,0);
+  }
+  
+  .bookkytomatoes:hover {background-color: #96bb7c;color: #f5f1da;}
 
   .button_back {
     background-color: #f5f1da ;
@@ -314,18 +323,22 @@
     background: wheat;
   }
 
-  #topnav ul{
-    list-style-type: none;
-    margin: 0;
-    margin-left: auto;
-    background-color: rgb(0,93,164);
-    padding: 1.5%;
-    display:inline-block;
-    width: 100%;
-}
-
 .email_user{
   color: #c26565;
   font-size: 125%;
-  font-family: monaco,Consolas,Lucida Console,monospace; 
+  font-family: monaco,Consolas,Lucida Console,monospace;
+}
+
+td{
+  color: #c26565;
+  font-weight: bold;
+  font-family: monaco,Consolas,Lucida Console,monospace;
+}
+
+a {
+  background: transparent;
+  color: #c26565;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: monaco,Consolas,Lucida Console,monospace;
 }
