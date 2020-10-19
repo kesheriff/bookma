@@ -30,18 +30,20 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
     <hr>
   <% end %>
   <% end %>
-
-  <div class="row">
-  <div class="col-sm">
   <div class="center">
   <%= link_to  '<button class="button_in_nav">Write review</button>'.html_safe, new_movie_review_path(@movie) %>  
   </div>
-  </div>
+  <hr>
+  <div class="row">
   <div class="col-sm">
   <div class="center">
   <%= link_to  '<button class="button_in_nav">Edit movie</button>'.html_safe, edit_movie_path(@movie) %>  &emsp;&emsp;
+
+  </div>
+  </div>
+  <div class="col-sm">
+  <div class="center">
   <%= link_to  '<button class="button_in_nav">Delete movie</button>'.html_safe, movie_path(@movie), :method => :delete %>  
-  
   <!--<%= link_to 'close','',{:id => 'closelink'} %>-->
   </div>
   </div>
