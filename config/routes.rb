@@ -5,6 +5,7 @@ devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_call
   resources :movies do
     resources :reviews, except: [:show, :index]
   end
+  resources :movie_from_tmdb
   root to: 'movies#index'
 
   get 'search' => 'movie_from_tmdb#index' , as:'search'
