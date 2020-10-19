@@ -1,7 +1,20 @@
-<h1>Editing Review</h1>
+<br>
+<br>
+<div class="center">
 
-<%= render 'form', review: @review %>
 
-<%= link_to 'Show', "#" %> |
 
-<%= link_to 'Back', "#" %>
+<%= form_for ([@movie,@review]),html: {class: "movie-form"} do |form| %>
+    
+    <h1>Edit review</h1>
+    
+
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+    <br>
+    <div>
+    <%= form.submit :Edit ,class: "button_submit"%>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<% end %>
+<%= link_to '<button class="button_back">Cancle</button>'.html_safe, movies_path %>
+</div>
+</div>
