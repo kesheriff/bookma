@@ -1,15 +1,15 @@
 class MoviesController < ApplicationController
     before_action :set_movie, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, except:[:index,:show]
     
-    def home
-    end
+
     def index
-        @movies = Movie.all
+        @movies = Movie.order(:title).order(:release_date)
     end
 
     def show
         @reviews = Review.where(movie_id: @movie.id).order("created_at DESC")
-        render(:partial => 'movie', :object => @movie) if request.xhr?
+        
     end
 
     def new
@@ -18,9 +18,7 @@ class MoviesController < ApplicationController
 
     def create
         @movie = current_user.movies.build(movie_params)
-    
           if @movie.save
-            #redirect_to movies_path(@movie), :notice => "Movie was successfully created."
             render "show" 
           else
             render "new"
@@ -33,9 +31,8 @@ class MoviesController < ApplicationController
     end
 
     def update
-        
           if @movie.update(movie_params)
-            render "show"
+            redirect_to movies_path
           else
             render "edit"
           end

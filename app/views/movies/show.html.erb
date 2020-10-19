@@ -1,8 +1,5 @@
 
 <br>
-<br>
-<br>
-
 
 <body>
 
@@ -17,7 +14,7 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
 <strong><p class="c_show">Release date:<%= @movie.release_date %></p></strong>
 
 <% if @reviews.blank? %>
-<h3> No reviews </h3>
+<br>
 
 <% else %>
 
@@ -28,7 +25,8 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
     </div>
     <p class="c_review"><%= review.comment %></p>
     <!--<%= link_to '<button class="button_review">Edit</button>'.html_safe, edit_movie_review_path(@movie.user) %>-->
-    
+    <%= link_to  'Edit', edit_movie_review_path(@movie) %>&emsp;&emsp;
+    <%= link_to  'Delete', movie_review_path(review), :method => :delete %>  
     <hr>
   <% end %>
   <% end %>
@@ -41,7 +39,10 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
   </div>
   <div class="col-sm">
   <div class="center">
-  <%= link_to 'close','',{:id => 'closelink'} %>
+  <%= link_to  '<button class="button_in_nav">Edit movie</button>'.html_safe, edit_movie_path(@movie) %>  &emsp;&emsp;
+  <%= link_to  '<button class="button_in_nav">Delete movie</button>'.html_safe, movie_path(@movie), :method => :delete %>  
+  
+  <!--<%= link_to 'close','',{:id => 'closelink'} %>-->
   </div>
   </div>
   <div class="col-sm">
