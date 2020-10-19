@@ -8,6 +8,7 @@
 <table class="table table-hover" width="70%" border="5px" bgcolor="#96bb7c" padding="15px">
   <thead>
     <tr>
+    <th>Row</th>
     <th >Title</th>
     <th >Rating</th>
     <th >Release Date</th>
@@ -16,12 +17,13 @@
   </thead>
 
   <tbody bgcolor="#f5f1da">
-    <% @movie_list.each do |movie| %>
+    <% @list_class.each.with_index(1) do |movie,index| %>
       <tr>
-      <td padding: 15px ><img src="https://image.tmdb.org/t/p/w500/<%= movie['poster_path'] %>" alt="" height="30%"><br><%= movie['title'] %></td>
-      <td padding: 15px><%= movie['vote_average'] %></td>
-      <td padding: 15px><%= movie['release_date'] %></td>
-      <td padding: 15px></td>
+      <td padding: 15px ><%= index %></td>
+      <td padding: 15px ><%= movie['title'] %></td>
+      <td padding: 15px><%= movie['rating'] %></td>
+      <td padding: 15px><%= movie.release_date  %></td>
+      <td><%= link_to "Add movie to Bookkytomatoes", edit_movie_from_tmdb_path(movie) %></td>
       </tr>
     <% end %>
   </tbody>
