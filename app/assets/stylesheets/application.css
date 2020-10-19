@@ -342,3 +342,5 @@ a {
   font-weight: bold;
   font-family: monaco,Consolas,Lucida Console,monospace;
 }
+
+a:hover {color: #96bb7c;}
