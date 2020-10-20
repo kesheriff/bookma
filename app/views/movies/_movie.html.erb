@@ -9,26 +9,5 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
 <strong><p class="c_show">Release date:<%= @movie.release_date %></p></strong>
 <br>
 <br>
-<% if @reviews.blank? %>
-<h3> No reviews </h3>
-
-<% else %>
-
-<hr>
-  <% @reviews.each do |review| %>
-    <div class="right">
-    <strong><p class="c_review"><%= review.user.email %></p></strong>
-    </div>
-    <p class="c_review"><%= review.comment %></p>
-    <!--<%= link_to '<button class="button_review">Edit</button>'.html_safe, edit_movie_review_path(@movie.user) %>-->
-    
-    <hr>
-  <% end %>
-  <% end %>
-  <br>
-  <div class="center">
-  <%= link_to  '<button class="button_in_nav">Write review</button>'.html_safe, new_movie_review_path(@movie) %>  
-  <%= link_to 'close','',{:id => 'closelink'} %>
-  </div>
-
+<%= link_to 'Close', '', {:id => 'closeLink'} %>
 </div>
