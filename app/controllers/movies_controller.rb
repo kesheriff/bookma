@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
 
     def show
         @reviews = Review.where(movie_id: @movie.id).order("created_at DESC")
-        
+        render(:partial => 'movie', :object => @movie ) if request.xhr?
     end
 
     def new

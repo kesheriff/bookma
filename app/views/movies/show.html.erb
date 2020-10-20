@@ -1,8 +1,5 @@
-
 <br>
-
 <body>
-
 <div class="container" 
 style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; border-radius: 10px; border: 7px groove #96bb7c;">
 
@@ -29,7 +26,7 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
       <%= link_to  'Edit', edit_movie_review_path(@movie,review) %>&emsp;&emsp;
       <%= link_to  'Delete', movie_review_path(@movie,review), :method => :delete %> 
     <% end %>
-    
+
     <hr>
     
   <% end %>
@@ -57,6 +54,7 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
   </div>
   </div>
 </div>
+<%= link_to 'Close', '', {:id => 'closeLink'} %>
 </div>
 
 
