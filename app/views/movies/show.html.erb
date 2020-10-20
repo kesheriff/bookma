@@ -24,13 +24,12 @@ style="width: 70%; color: black; background-color: #f5f1da; padding: 50px 20px; 
     <strong><p class="c_review"><%= review.user.email %></p></strong>
     </div>
     <p class="c_review"><%= review.comment %></p>
-    <p class="c_review">current_user id:<%= current_user.id %></p>
-    <p class="c_review">user id:<%= review.user_id %></p>
-    <!--<%= link_to '<button class="button_review">Edit</button>'.html_safe, edit_movie_review_path(@movie.user) %>-->
+    
     <% if current_user.id ==  review.user_id %>
       <%= link_to  'Edit', edit_movie_review_path(@movie,review) %>&emsp;&emsp;
       <%= link_to  'Delete', movie_review_path(@movie,review), :method => :delete %> 
     <% end %>
+    
     <hr>
     
   <% end %>
