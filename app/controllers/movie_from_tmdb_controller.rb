@@ -53,5 +53,6 @@ class MovieFromTmdbController < ApplicationController
       else 
         redirect_to movies_path
       end
+      MovieFromTmdb.destroy_all
     end
 end
