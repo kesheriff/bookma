@@ -310,10 +310,21 @@
     font-size: 100%;
   }
   
-  table{
-    color: #c26565;
-    font-family: Cambria,Georgia,serif; 
+  table#movies{
+    color: black;
+    font-family: monaco,Consolas,Lucida Console,monospace; 
     font-size: 125%;
+    width: 100%;
+
+  }
+  table#movies th {
+    border: 2px solid black;
+    font-weight: bold;
+    background-color: #96bb7c;
+  }
+  table#movies th, table#movies td {
+    padding: 15px;
+    border: 2px solid black;
   }
 
   #movieInfo {
