@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'themoviedb'
